@@ -1,0 +1,56 @@
+22:18:31 **** Clean-only build of configuration Debug for project client ****
+make clean 
+rm -rf  ./src/client.o ./src/utils.o  ./src/client.d ./src/utils.d  client
+ 
+22:18:32 **** Build of configuration Debug for project client ****
+make all 
+Building file: ../src/client.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘main’:
+../src/client.c:10:8: warning: unused variable ‘valor’ [-Wunused-variable]
+  char* valor;
+        ^
+../src/client.c: In function ‘leer_consola’:
+../src/client.c:71:8: warning: variable ‘leido’ set but not used [-Wunused-but-set-variable]
+  char* leido;
+        ^
+../src/client.c: In function ‘paquete’:
+../src/client.c:87:13: warning: unused variable ‘paquete’ [-Wunused-variable]
+  t_paquete* paquete;
+             ^
+../src/client.c:86:8: warning: unused variable ‘leido’ [-Wunused-variable]
+  char* leido;
+        ^
+../src/client.c: In function ‘iniciar_logger’:
+../src/client.c:59:9: warning: ‘nuevo_logger’ is used uninitialized in this function [-Wuninitialized]
+  return nuevo_logger;
+         ^
+../src/client.c: In function ‘iniciar_config’:
+../src/client.c:66:9: warning: ‘nuevo_config’ is used uninitialized in this function [-Wuninitialized]
+  return nuevo_config;
+         ^
+../src/client.c: In function ‘main’:
+../src/client.c:42:11: warning: ‘ip’ is used uninitialized in this function [-Wuninitialized]
+  conexion = crear_conexion(ip, puerto);
+           ^
+../src/client.c:42:11: warning: ‘puerto’ is used uninitialized in this function [-Wuninitialized]
+Finished building: ../src/client.c
+ 
+Building file: ../src/utils.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utils.d" -MT"src/utils.o" -o "src/utils.o" "../src/utils.c"
+../src/utils.c: In function ‘crear_super_paquete’:
+../src/utils.c:78:9: warning: ‘paquete’ is used uninitialized in this function [-Wuninitialized]
+  return paquete;
+         ^
+Finished building: ../src/utils.c
+ 
+Building target: client
+Invoking: GCC C Linker
+gcc  -o "client"  ./src/client.o ./src/utils.o   -lcommons -lreadline
+Finished building target: client
+ 
+22:18:38 **** Incremental Build of configuration Debug for project client ****
+make all 
+make: Nothing to be done for 'all'.
