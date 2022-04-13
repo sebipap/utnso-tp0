@@ -1,5 +1,7 @@
 # Sistemas Operativos - TP0
 
+aca agrego una linea
+
 ## ¿De qué trata?
 
 El TP0 es una práctica inicial para empezar a familiarizarse con algunas de las herramientas necesarias para el trabajo práctico cuatrimestral de la materia Sistemas Operativos.
